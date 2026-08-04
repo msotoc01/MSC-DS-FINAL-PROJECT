@@ -1,0 +1,24 @@
+# Core
+pandas
+numpy
+
+# Agents / LLM
+smolagents
+openai
+python-dotenv
+
+# Retrieval
+sentence-transformers
+
+# Optimisation (CBC solver ships with PuLP)
+pulp
+
+# Evaluation
+scikit-learn
+
+# Interface & plots
+streamlit
+plotly
+
+# Dev
+pytest
