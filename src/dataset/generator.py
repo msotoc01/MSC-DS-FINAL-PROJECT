@@ -18,7 +18,7 @@ from task import Task
 from .vocab import DOMAIN_KEYS, pick_domain_vocab
 from .templates import CATEGORIES
 
-# ── Project structure ────────────────────────────────────────────────────
+# Project structure 
 CORE_CHAIN = [
     "data_collection",
     "data_cleaning",
@@ -36,7 +36,7 @@ PRIORITY_LEVELS = {"low": 1, "medium": 2, "high": 3}
 # Deadline slack (minutes of buffer after task duration) by priority: tighter for urgent work.
 DEADLINE_SLACK_MINUTES = {"low": (240, 1440), "medium": (120, 480), "high": (30, 180)}
 
-# ── Out-of-distribution template split ───────────────────────────────────
+# Out-of-distribution template split
 OOD_SEED = 20260717            
 VARIATION_LEVELS = ["negation", "multi_step", "ambiguous"]
 
@@ -53,7 +53,7 @@ def _split_templates():
     for i, (cat, meta) in enumerate(CATEGORIES.items()):
         levels = meta["templates"]
 
-        var_level = VARIATION_LEVELS[i % len(VARIATION_LEVELS)]   # deterministic rotation
+        var_level = VARIATION_LEVELS[i % len(VARIATION_LEVELS)]   
         held_out = {
             rng.choice(levels["standard"]),
             rng.choice(levels[var_level]),

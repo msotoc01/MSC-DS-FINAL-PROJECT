@@ -74,3 +74,9 @@ def check_dependencies(ordered_tasks: list[Task]) -> list[tuple]:
             if dep in position and position[dep] > position[t.task_id]:
                 violations.append((t.task_id, dep))
     return violations
+
+def as_working_days(minutes: int) -> str:
+    """Format a duration in working minutes as 'Xd Yh' for display."""
+    days, rem = divmod(int(minutes), config.WORKING_MINUTES_PER_DAY)
+    hours = rem / 60
+    return f"{days}d {hours:.1f}h" if days else f"{hours:.1f}h"

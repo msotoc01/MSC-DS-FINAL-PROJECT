@@ -1,9 +1,6 @@
 """
 Generate the synthetic dataset: historical repository + evaluation set (+ hidden
 ground truth for the evaluation set).
-
-Usage:
-    python scripts/generate_dataset.py --n-repository 4500 --n-evaluation 600 --seed 42
 """
 
 import argparse

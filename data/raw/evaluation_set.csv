@@ -1,0 +1,601 @@
+task_id,description,arrival_time,deadline
+evaltask_000001,"First query the production database, then consolidate the extracts into the subscription churn dataset.",3577,4089
+evaltask_000002,Investigate and correct inconsistent entries in the subscription churn dataset.,4398,5191
+evaltask_000003,Have a proper look at the subscription churn dataset and tell me what's going on.,4609,5111
+evaltask_000004,Create lagged variables based on usage frequency for the subscription churn dataset.,5661,7243
+evaltask_000005,Compare training time and convergence of the logistic regression model on the subscription churn dataset.,5801,6104
+evaltask_000006,"Compute precision, recall and F1 for customer attrition predictions.",6885,7086
+evaltask_000007,Fit the logistic regression model on the subscription churn dataset without using the usage frequency column.,8225,8932
+evaltask_000008,Stress-test the logistic regression model against edge cases in the subscription churn dataset.,9138,10038
+evaltask_000009,Establishing a baseline logistic regression model for customer attrition prediction.,9906,10354
+evaltask_000010,Compare the logistic regression model against the previous version without retraining either of them.,10934,12164
+evaltask_000011,"Draft the customer attrition findings first, then turn them into slides for stakeholders.",12181,12703
+evaltask_000012,Patch a schema change that broke the subscription churn dataset pipeline.,21321,21770
+evaltask_000013,Check where the patient records dataset is actually coming from.,44512,44754
+evaltask_000014,Deduplicate the patient records dataset and then standardise the comorbidity count column formats.,45223,45442
+evaltask_000015,"Profile the patient records dataset first, then investigate how comorbidity count relates to 30-day readmission.",45660,46168
+evaltask_000016,Build features for the gradient boosting model without using information unavailable at prediction time.,46501,46925
+evaltask_000017,Compare training time and convergence of the gradient boosting model on the patient records dataset.,47226,47425
+evaltask_000018,"Not convinced by the gradient boosting model numbers, look into them.",48612,48928
+evaltask_000019,Set up cross-validation and then fit the gradient boosting model on the prepared patient records dataset.,49412,50853
+evaltask_000020,Stress-test the gradient boosting model against edge cases in the patient records dataset.,49552,49881
+evaltask_000021,Draft release notes describing changes to the gradient boosting model pipeline.,50598,51465
+evaltask_000022,Reviewing pipeline logs after an unexpected failure.,58963,59698
+evaltask_000023,Download and consolidate external data sources for the payments dataset.,43696,44338
+evaltask_000024,Investigate and correct inconsistent entries in the payments dataset.,44207,45059
+evaltask_000025,Not sure what's driving fraud risk — dig into it.,45548,46668
+evaltask_000026,Compare training time and convergence of the gradient boosting model on the payments dataset.,46020,46391
+evaltask_000027,"First reproduce the reported gradient boosting model metrics, then investigate the drop in recall.",46620,46869
+evaltask_000028,Give the gradient boosting model another run with the latest payments dataset.,47265,47747
+evaltask_000029,Assessing whether the gradient boosting model meets the required performance threshold.,48340,48493
+evaltask_000030,Draft release notes describing changes to the gradient boosting model pipeline.,49596,49737
+evaltask_000031,The payments dataset pipeline has been flaky all week.,49510,50767
+evaltask_000032,"First query the production database, then consolidate the extracts into the credit bureau dataset.",15675,16207
+evaltask_000033,Impute missing values for repayment history using an appropriate strategy.,16606,16909
+evaltask_000034,"Compute summary statistics for the credit bureau dataset, then visualise how creditworthiness moves over time.",17387,17598
+evaltask_000035,Build aggregated features summarising repayment history at the project level.,18481,18687
+evaltask_000036,Compare training time and convergence of the logistic regression model on the credit bureau dataset.,18933,19255
+evaltask_000037,"Not convinced by the logistic regression model numbers, look into them.",20035,20253
+evaltask_000038,Document the logistic regression model limitations without disclosing the underlying credit bureau dataset schema.,20792,21150
+evaltask_000039,Set up an automated pipeline to pull new records into the purchase history dataset.,74624,75025
+evaltask_000040,Resolve inconsistent entries in the purchase history dataset without dropping any rows.,75625,75907
+evaltask_000041,"First scale category preference, then check whether the two-tower neural network still needs the interaction terms.",76557,77360
+evaltask_000042,"Rebuild the training pipeline, then retrain the two-tower neural network on the updated purchase history dataset.",77306,77587
+evaltask_000043,Check the two-tower neural network for fairness across segments of the purchase history dataset.,78460,78577
+evaltask_000044,"First collect the two-tower neural network results, then prepare a one-page summary for management.",79140,79698
+evaltask_000045,Add monitoring for a recurring failure in the purchase history dataset pipeline.,77066,78165
+evaltask_000046,Download and consolidate external data sources for the customer churn dataset.,29970,30327
+evaltask_000047,"First fix the encoding issues in the customer churn dataset, then reconcile the mismatched identifiers.",30991,31509
+evaltask_000048,"Encode the categorical variables, then test whether they improve customer churn prediction.",32365,32922
+evaltask_000049,Give the gradient boosting model another run with the latest customer churn dataset.,33274,33541
+evaltask_000050,Stress-test the gradient boosting model against edge cases in the customer churn dataset.,34190,34646
+evaltask_000051,Write a summary report describing the gradient boosting model results for customer churn.,35150,35402
+evaltask_000052,Investigate a failed run in the customer churn dataset ingestion pipeline.,37000,37217
+evaltask_000053,Update pipeline dependencies feeding the customer churn dataset.,42251,42787
+evaltask_000054,Fix a broken scheduled job feeding the customer churn dataset.,33163,33715
+evaltask_000055,Download and consolidate external data sources for the shipment tracking dataset.,56903,57090
+evaltask_000056,Reconcile mismatched identifiers between two versions of the shipment tracking dataset.,56958,58094
+evaltask_000057,Check for seasonality patterns related to lead time in the shipment tracking dataset.,57895,58899
+evaltask_000058,Create lagged variables based on lead time for the shipment tracking dataset.,58550,59210
+evaltask_000059,Get a first stock-out risk baseline without tuning the random forest regressor at all.,58818,59345
+evaltask_000060,Check the random forest regressor for fairness across segments of the shipment tracking dataset.,59848,60246
+evaltask_000061,"Rebuild the training pipeline, then retrain the random forest regressor on the updated shipment tracking dataset.",60843,61363
+evaltask_000062,Validate the random forest regressor without touching the held-out test split.,61066,62450
+evaltask_000063,Give the random forest regressor another run with the latest shipment tracking dataset.,62127,62446
+evaltask_000064,"Compute precision, recall and F1 for stock-out risk predictions.",62966,63034
+evaltask_000065,Document the random forest regressor limitations without disclosing the underlying shipment tracking dataset schema.,63327,64727
+evaltask_000066,Refactor the ingestion pipeline for the shipment tracking dataset to reduce runtime.,69320,70297
+evaltask_000067,Investigate a failed run in the shipment tracking dataset ingestion pipeline.,65713,65874
+evaltask_000068,Reviewing pipeline logs after an unexpected failure.,57762,58084
+evaltask_000069,Query the production database to extract data for the product image dataset.,65873,66517
+evaltask_000070,Clean the product image dataset for image quality label modelling without altering the original source files.,66966,67313
+evaltask_000071,Summarise the product image dataset without producing any new visualisations.,68242,68673
+evaltask_000072,Compare training time and convergence of the convolutional neural network on the product image dataset.,69468,70697
+evaltask_000073,"Compute precision, recall and F1 for image quality label predictions.",70066,71373
+evaltask_000074,Get a first image quality label baseline without tuning the convolutional neural network at all.,71298,71697
+evaltask_000075,Stress-test the convolutional neural network against edge cases in the product image dataset.,71352,71544
+evaltask_000076,"The convolutional neural network isn't picking anything up, have a go at it.",71556,71893
+evaltask_000077,Stress-test the convolutional neural network against edge cases in the product image dataset.,72644,73169
+evaltask_000078,Prepare a one-page summary of convolutional neural network results for management.,73429,74758
+evaltask_000079,Download and consolidate external data sources for the defect inspection image dataset.,28255,28790
+evaltask_000080,Detect and treat outliers in colour histogram within the defect inspection image dataset.,28335,28574
+evaltask_000081,"First fit the fine-tuned ResNet model on a sample, then run the full training on the defect inspection image dataset.",29775,31329
+evaltask_000082,"Not convinced by the fine-tuned ResNet model numbers, look into them.",30299,30572
+evaltask_000083,Give the fine-tuned ResNet model another run with the latest defect inspection image dataset.,30983,31378
+evaltask_000084,Assessing whether the fine-tuned ResNet model meets the required performance threshold.,32344,32576
+evaltask_000085,Give the fine-tuned ResNet model another run with the latest defect inspection image dataset.,33080,33473
+evaltask_000086,"Not convinced by the fine-tuned ResNet model numbers, look into them.",33520,33803
+evaltask_000087,Updating the project README with the latest defect inspection image dataset schema.,34753,34944
+evaltask_000088,Rebuild the loan applications dataset without re-scraping the external sources.,62497,63356
+evaltask_000089,"The loan applications dataset looks messy again, deal with it.",63657,64672
+evaltask_000090,Have a proper look at the loan applications dataset and tell me what's going on.,64136,64803
+evaltask_000091,"Whatever we did last time to the logistic regression model, do it again with the new data.",65332,66412
+evaltask_000092,Compare the logistic regression model against the previous version without retraining either of them.,66082,66392
+evaltask_000093,Document the data preparation steps applied to the loan applications dataset.,67134,67604
+evaltask_000094,"Restart the loan applications dataset pipeline, then verify the overnight load completed correctly.",61421,61834
+evaltask_000095,Add monitoring for a recurring failure in the loan applications dataset pipeline.,62411,62672
+evaltask_000096,The loan applications dataset ingestion job fell over again last night.,66295,66977
+evaltask_000097,Rebuild the social media comments dataset without re-scraping the external sources.,41661,42194
+evaltask_000098,Remove duplicate records from the social media comments dataset.,41678,42139
+evaltask_000099,Build features for the fine-tuned transformer model without using information unavailable at prediction time.,42885,43359
+evaltask_000100,Compare training time and convergence of the fine-tuned transformer model on the social media comments dataset.,42962,43341
+evaltask_000101,Validate the fine-tuned transformer model without touching the held-out test split.,43377,43790
+evaltask_000102,"Rebuild the training pipeline, then retrain the fine-tuned transformer model on the updated social media comments dataset.",43436,43917
+evaltask_000103,Assess the fine-tuned transformer model on customer satisfaction without relying on accuracy as the headline metric.,44696,45021
+evaltask_000104,Fit the fine-tuned transformer model on the prepared social media comments dataset.,46034,46551
+evaltask_000105,Compare the fine-tuned transformer model against a previous version on the social media comments dataset.,46450,46692
+evaltask_000106,"Update the README with the new social media comments dataset schema, then draft the fine-tuned transformer model release notes.",47653,48451
+evaltask_000107,Download and consolidate external data sources for the network traffic dataset.,49817,50290
+evaltask_000108,Clean the network traffic dataset for intrusion type modelling without altering the original source files.,49922,50463
+evaltask_000109,Summarising key findings from the exploratory analysis of the network traffic dataset.,50208,50567
+evaltask_000110,Build features for the gradient boosting model without using information unavailable at prediction time.,50318,51034
+evaltask_000111,Set up the training pipeline for the gradient boosting model.,51528,52237
+evaltask_000112,Evaluate the gradient boosting model on a held-out split of the network traffic dataset.,51870,52405
+evaltask_000113,Nobody knows how the gradient boosting model works — fix that.,52108,52371
+evaltask_000114,Resolve the freshness issue in the network traffic dataset without changing the ingestion schedule.,52758,53161
+evaltask_000115,The network traffic dataset ingestion job fell over again last night.,52204,52591
+evaltask_000116,Collect raw data for the credit bureau dataset from the source system.,38678,39271
+evaltask_000117,Investigate and correct inconsistent entries in the credit bureau dataset.,39901,40271
+evaltask_000118,Compare repayment history distributions across different segments of the credit bureau dataset.,41202,41565
+evaltask_000119,Normalise and scale repayment history ahead of model training.,41866,42667
+evaltask_000120,Training a scorecard model from scratch on the updated credit bureau dataset.,42875,43314
+evaltask_000121,Stress-test the scorecard model against edge cases in the credit bureau dataset.,42936,43177
+evaltask_000122,Write a summary report describing the scorecard model results for repayment probability.,44028,44514
+evaltask_000123,"First add monitoring for the recurring failure, then refactor the credit bureau dataset ingestion.",41930,42852
+evaltask_000124,Download and consolidate external data sources for the subscription churn dataset.,57915,58504
+evaltask_000125,Investigate and correct inconsistent entries in the subscription churn dataset.,59201,60445
+evaltask_000126,Investigating class imbalance in customer attrition within the subscription churn dataset.,59545,59953
+evaltask_000127,Create lagged variables based on tenure for the subscription churn dataset.,59998,60372
+evaltask_000128,Fine-tune the gradient boosting model on a recent snapshot of the subscription churn dataset.,61109,61660
+evaltask_000129,Investigate a drop in gradient boosting model recall after the last subscription churn dataset update.,61689,62263
+evaltask_000130,Debug a training failure encountered while fitting the gradient boosting model.,62527,63241
+evaltask_000131,Compare the gradient boosting model against a previous version on the subscription churn dataset.,63523,63965
+evaltask_000132,Prepare slides presenting the gradient boosting model performance to stakeholders.,63608,64089
+evaltask_000133,Extract records for the demand forecasting dataset without pulling any personally identifiable fields.,70189,71013
+evaltask_000134,Filter out the corrupted rows and afterwards impute what's missing in lag features.,71400,71971
+evaltask_000135,Generate embeddings to represent lag features for the gradient boosting regressor.,71446,71541
+evaltask_000136,Training a gradient boosting regressor from scratch on the updated demand forecasting dataset.,71586,72972
+evaltask_000137,Stress-test the gradient boosting regressor against edge cases in the demand forecasting dataset.,71993,72248
+evaltask_000138,Document the gradient boosting regressor limitations without disclosing the underlying demand forecasting dataset schema.,73391,73757
+evaltask_000139,Rebuild the product image dataset without re-scraping the external sources.,59405,59888
+evaltask_000140,Filter out the corrupted rows and afterwards impute what's missing in colour histogram.,60586,61081
+evaltask_000141,Visualise trends in defect presence over time using the product image dataset.,60669,61051
+evaltask_000142,The inputs to the fine-tuned ResNet model need rethinking.,61018,61426
+evaltask_000143,"First fit the fine-tuned ResNet model on a sample, then run the full training on the product image dataset.",61234,62177
+evaltask_000144,Check whether the fine-tuned ResNet model is actually any good on defect presence.,62608,63034
+evaltask_000145,Document the fine-tuned ResNet model limitations without disclosing the underlying product image dataset schema.,63470,64600
+evaltask_000146,Resolve a data freshness issue affecting the product image dataset.,69560,70678
+evaltask_000147,Collect raw data for the shipment tracking dataset from the source system.,67340,68240
+evaltask_000148,Filter out invalid or corrupted rows from the shipment tracking dataset.,68030,68254
+evaltask_000149,Not sure what's driving route efficiency — dig into it.,68611,69189
+evaltask_000150,See if we can squeeze more out of supplier reliability for route efficiency.,69137,69400
+evaltask_000151,Fit the random forest regressor on the prepared shipment tracking dataset.,70090,70607
+evaltask_000152,"Evaluate the random forest regressor on the shipment tracking dataset, then check fairness across the main segments.",71385,71581
+evaltask_000153,Compare training time and convergence of the random forest regressor on the shipment tracking dataset.,71987,72613
+evaltask_000154,"Not convinced by the random forest regressor numbers, look into them.",73091,73645
+evaltask_000155,"Rebuild the training pipeline, then retrain the random forest regressor on the updated shipment tracking dataset.",74118,74317
+evaltask_000156,"Not convinced by the random forest regressor numbers, look into them.",74756,75310
+evaltask_000157,Put together whatever we have on the shipment tracking dataset for the handover.,75558,77029
+evaltask_000158,"First add monitoring for the recurring failure, then refactor the shipment tracking dataset ingestion.",71678,71773
+evaltask_000159,Extract records for the smart meter dataset without pulling any personally identifiable fields.,55864,56343
+evaltask_000160,Fixing encoding issues in the smart meter dataset before further processing.,57023,57553
+evaltask_000161,Have a proper look at the smart meter dataset and tell me what's going on.,58073,58413
+evaltask_000162,"First fit the LSTM forecasting model on a sample, then run the full training on the smart meter dataset.",59142,59697
+evaltask_000163,Evaluate the LSTM forecasting model on a held-out split of the smart meter dataset.,59874,60285
+evaltask_000164,Set up cross-validation and then fit the LSTM forecasting model on the prepared smart meter dataset.,59976,60327
+evaltask_000165,Compare the LSTM forecasting model against the previous version without retraining either of them.,60014,60832
+evaltask_000166,Finalise documentation before closing out the hourly energy consumption project.,60608,61331
+evaltask_000167,"Check the pipeline logs, then patch the schema change that broke the smart meter dataset ingestion.",68163,68674
+evaltask_000168,"The smart meter dataset numbers look stale, find out why.",61152,61275
+evaltask_000169,Rebuild the A/B test results dataset without re-scraping the external sources.,66021,66547
+evaltask_000170,Filter out the corrupted rows and afterwards impute what's missing in sample size.,67409,68041
+evaltask_000171,Investigating class imbalance in experiment outcome within the A/B test results dataset.,68162,69693
+evaltask_000172,Generate embeddings to represent sample size for the Bayesian A/B testing model.,68709,69133
+evaltask_000173,"Rebuild the training pipeline, then retrain the Bayesian A/B testing model on the updated A/B test results dataset.",69813,70489
+evaltask_000174,"Not convinced by the Bayesian A/B testing model numbers, look into them.",70722,71004
+evaltask_000175,Training a Bayesian A/B testing model from scratch on the updated A/B test results dataset.,72098,72414
+evaltask_000176,"Score the Bayesian A/B testing model on the held-out split, then run an error analysis on the failures.",72214,72364
+evaltask_000177,Write handover notes for the A/B test results dataset project.,73540,74034
+evaltask_000178,Rebuild the shipment tracking dataset without re-scraping the external sources.,8431,8808
+evaltask_000179,Investigate and correct inconsistent entries in the shipment tracking dataset.,9857,10318
+evaltask_000180,Identify data quality issues that could affect route efficiency prediction.,10918,11437
+evaltask_000181,Give the mixed-integer optimisation model another run with the latest shipment tracking dataset.,12209,12723
+evaltask_000182,The mixed-integer optimisation model was fine last month and now it isn't.,12508,12772
+evaltask_000183,Write a summary report describing the mixed-integer optimisation model results for route efficiency.,12783,13140
+evaltask_000184,Resolve a data freshness issue affecting the shipment tracking dataset.,13338,14702
+evaltask_000185,"First query the production database, then consolidate the extracts into the customer churn dataset.",51782,52061
+evaltask_000186,Standardise column formats across the customer churn dataset.,52662,53045
+evaltask_000187,Test whether adding monthly charges-derived features improves signal for customer churn.,53775,54387
+evaltask_000188,"First fit the logistic regression model on a sample, then run the full training on the customer churn dataset.",54126,54446
+evaltask_000189,The logistic regression model was fine last month and now it isn't.,55352,55457
+evaltask_000190,Prepare a one-page summary of logistic regression model results for management.,56661,57218
+evaltask_000191,The customer churn dataset pipeline has been flaky all week.,61515,61775
+evaltask_000192,Patch a schema change that broke the customer churn dataset pipeline.,64372,65929
+evaltask_000193,The customer churn dataset ingestion job fell over again last night.,71112,71257
+evaltask_000194,Download and consolidate external data sources for the credit bureau dataset.,41471,41766
+evaltask_000195,Deduplicate the credit bureau dataset and then standardise the loan term column formats.,41545,42648
+evaltask_000196,Summarise the credit bureau dataset without producing any new visualisations.,42061,42396
+evaltask_000197,"Create the lagged variables from loan term, then aggregate them at project level.",42144,42849
+evaltask_000198,Run cross-validation while training the XGBoost model on the credit bureau dataset.,42929,43295
+evaltask_000199,"Score the XGBoost model on the held-out split, then run an error analysis on the failures.",43454,43819
+evaltask_000200,Document the XGBoost model limitations without disclosing the underlying credit bureau dataset schema.,43891,44277
+evaltask_000201,The credit bureau dataset ingestion job fell over again last night.,56537,58034
+evaltask_000202,Merge multiple data extracts into a single maintenance records dataset.,62961,63264
+evaltask_000203,Filter out the corrupted rows and afterwards impute what's missing in vibration readings.,63145,63655
+evaltask_000204,Summarise the maintenance records dataset without producing any new visualisations.,63816,64367
+evaltask_000205,Reduce the dimensionality of the maintenance records dataset without discarding vibration readings.,64556,65100
+evaltask_000206,Set up the training pipeline for the LSTM survival model.,64743,64921
+evaltask_000207,Produce a confusion matrix summarising LSTM survival model performance on remaining useful life.,65475,65706
+evaltask_000208,Draft release notes describing changes to the LSTM survival model pipeline.,65961,66261
+evaltask_000209,Update pipeline dependencies feeding the maintenance records dataset.,79235,79392
+evaltask_000210,"Request access to the new source, then pull an initial extract into the customer feedback dataset.",45481,46730
+evaltask_000211,Investigate and correct inconsistent entries in the customer feedback dataset.,46680,46835
+evaltask_000212,Fit the fine-tuned transformer model on the customer feedback dataset without using the review length column.,47810,47983
+evaltask_000213,"Evaluate the fine-tuned transformer model on the customer feedback dataset, then check fairness across the main segments.",48833,49867
+evaltask_000214,Training a fine-tuned transformer model from scratch on the updated customer feedback dataset.,50059,50637
+evaltask_000215,Produce a confusion matrix summarising fine-tuned transformer model performance on customer satisfaction.,51165,51414
+evaltask_000216,"Draft the customer satisfaction findings first, then turn them into slides for stakeholders.",51184,51466
+evaltask_000217,Fix a broken scheduled job feeding the customer feedback dataset.,55865,56977
+evaltask_000218,Download and consolidate external data sources for the smart meter dataset.,68191,69252
+evaltask_000219,"The smart meter dataset looks messy again, deal with it.",68468,68850
+evaltask_000220,Analyse correlations between occupancy patterns and energy anomalies in the smart meter dataset.,69235,69447
+evaltask_000221,"Create the lagged variables from occupancy patterns, then aggregate them at project level.",69627,70159
+evaltask_000222,"Whatever we did last time to the LSTM forecasting model, do it again with the new data.",69735,70328
+evaltask_000223,"First reproduce the reported LSTM forecasting model metrics, then investigate the drop in recall.",69911,70114
+evaltask_000224,Write a summary report describing the LSTM forecasting model results for energy anomalies.,71291,71539
+evaltask_000225,Reviewing pipeline logs after an unexpected failure.,79100,79315
+evaltask_000226,Update pipeline dependencies feeding the smart meter dataset.,75821,76927
+evaltask_000227,Gather the missing records for the smart meter dataset without hitting production directly.,28819,29321
+evaltask_000228,Standardise column formats across the smart meter dataset.,29321,29547
+evaltask_000229,"Compute summary statistics for the smart meter dataset, then visualise how hourly energy consumption moves over time.",29727,30351
+evaltask_000230,The inputs to the prophet model need rethinking.,30078,30690
+evaltask_000231,Set up cross-validation and then fit the prophet model on the prepared smart meter dataset.,30626,31182
+evaltask_000232,The prophet model was fine last month and now it isn't.,31588,33063
+evaltask_000233,Training a prophet model from scratch on the updated smart meter dataset.,32908,33265
+evaltask_000234,Stress-test the prophet model against edge cases in the smart meter dataset.,33636,34470
+evaltask_000235,Train a prophet model to predict hourly energy consumption using the smart meter dataset.,34817,35345
+evaltask_000236,"First reproduce the reported prophet model metrics, then investigate the drop in recall.",35892,37225
+evaltask_000237,Put together whatever we have on the smart meter dataset for the handover.,36141,36546
+evaltask_000238,Extract records for the hospital admissions dataset without pulling any personally identifiable fields.,22549,23295
+evaltask_000239,Impute missing values for lab results using an appropriate strategy.,22983,23513
+evaltask_000240,Have a proper look at the hospital admissions dataset and tell me what's going on.,23009,23353
+evaltask_000241,"lab results on its own isn't telling us much, work on it.",23045,23239
+evaltask_000242,Establishing a baseline gradient boosting model for length of stay prediction.,24237,25498
+evaltask_000243,"Not convinced by the gradient boosting model numbers, look into them.",25528,26076
+evaltask_000244,"Draft the length of stay findings first, then turn them into slides for stakeholders.",25731,26497
+evaltask_000245,Restart and verify the hospital admissions dataset pipeline after a maintenance window.,32886,33092
+evaltask_000246,The hospital admissions dataset pipeline has been flaky all week.,41149,42043
+evaltask_000247,Restore the hospital admissions dataset pipeline without triggering a full historical backfill.,26543,27356
+evaltask_000248,Requesting access to a new data source needed for the employee survey dataset.,20327,20876
+evaltask_000249,Filter out the corrupted rows and afterwards impute what's missing in performance rating.,21342,22606
+evaltask_000250,Segment the employee survey dataset first and afterwards compare performance rating across the segments.,22411,23529
+evaltask_000251,"performance rating on its own isn't telling us much, work on it.",22978,24654
+evaltask_000252,Establishing a baseline logistic regression model for resignation risk prediction.,24285,24814
+evaltask_000253,Investigate a drop in logistic regression model recall after the last employee survey dataset update.,24439,25040
+evaltask_000254,Set up cross-validation and then fit the logistic regression model on the prepared employee survey dataset.,25088,25600
+evaltask_000255,"Not convinced by the logistic regression model numbers, look into them.",25917,26225
+evaltask_000256,They want something on resignation risk for tomorrow.,26006,26597
+evaltask_000257,The employee survey dataset ingestion job fell over again last night.,37058,37589
+evaltask_000258,Reviewing pipeline logs after an unexpected failure.,24002,24621
+evaltask_000259,"Restart the employee survey dataset pipeline, then verify the overnight load completed correctly.",28848,29162
+evaltask_000260,Gather the missing records for the clinical notes dataset without hitting production directly.,69503,69652
+evaltask_000261,Filter out the corrupted rows and afterwards impute what's missing in discharge disposition.,70677,71202
+evaltask_000262,Produce summary statistics and visualisations for the clinical notes dataset.,71571,71958
+evaltask_000263,Reduce the dimensionality of the clinical notes dataset without discarding discharge disposition.,72623,72884
+evaltask_000264,Retrain the gradient boosting model on the clinical notes dataset without changing the current hyperparameters.,72762,73006
+evaltask_000265,Evaluate the gradient boosting model on a held-out split of the clinical notes dataset.,73943,74042
+evaltask_000266,Retrain the gradient boosting model after incorporating the new features.,74353,76005
+evaltask_000267,"Not convinced by the gradient boosting model numbers, look into them.",74534,74830
+evaltask_000268,Set up the training pipeline for the gradient boosting model.,74622,75079
+evaltask_000269,"Not convinced by the gradient boosting model numbers, look into them.",75759,76042
+evaltask_000270,"Draft the patient risk score findings first, then turn them into slides for stakeholders.",75853,76518
+evaltask_000271,Fix a broken scheduled job feeding the clinical notes dataset.,74346,74625
+evaltask_000272,Pull the latest records and afterwards check the borrower repayment dataset covers the full time range.,63638,64769
+evaltask_000273,Deduplicate the borrower repayment dataset and then standardise the income-to-debt ratio column formats.,64528,65065
+evaltask_000274,"Profile the borrower repayment dataset first, then investigate how income-to-debt ratio relates to repayment probability.",65171,65965
+evaltask_000275,Finalise the feature set to be used by the logistic regression model.,66153,66819
+evaltask_000276,"Rebuild the training pipeline, then retrain the logistic regression model on the updated borrower repayment dataset.",67257,67951
+evaltask_000277,Compare the logistic regression model against a previous version on the borrower repayment dataset.,67700,67905
+evaltask_000278,Train a logistic regression model to predict repayment probability using the borrower repayment dataset.,68590,68936
+evaltask_000279,"Not convinced by the logistic regression model numbers, look into them.",68943,69157
+evaltask_000280,Summarise the logistic regression model results for management without including technical detail.,69473,70664
+evaltask_000281,Set up an automated pipeline to pull new records into the A/B test results dataset.,8108,9477
+evaltask_000282,Filter out invalid or corrupted rows from the A/B test results dataset.,8714,9294
+evaltask_000283,Identify data quality issues that could affect experiment outcome prediction.,9998,10456
+evaltask_000284,See if we can squeeze more out of sample size for experiment outcome.,11223,11594
+evaltask_000285,Fit the Bayesian A/B testing model on the A/B test results dataset without using the sample size column.,11422,12108
+evaltask_000286,Stress-test the Bayesian A/B testing model against edge cases in the A/B test results dataset.,12439,12689
+evaltask_000287,Document the Bayesian A/B testing model limitations without disclosing the underlying A/B test results dataset schema.,12620,12899
+evaltask_000288,Update pipeline dependencies feeding the A/B test results dataset.,25230,26619
+evaltask_000289,Requesting access to a new data source needed for the borrower repayment dataset.,53598,54716
+evaltask_000290,Filter out the corrupted rows and afterwards impute what's missing in repayment history.,54218,54453
+evaltask_000291,Have a proper look at the borrower repayment dataset and tell me what's going on.,54753,54940
+evaltask_000292,"Create the lagged variables from repayment history, then aggregate them at project level.",55864,56208
+evaltask_000293,Fit the logistic regression model on the prepared borrower repayment dataset.,56622,56937
+evaltask_000294,Check the logistic regression model for fairness across segments of the borrower repayment dataset.,57669,58056
+evaltask_000295,"Update the README with the new borrower repayment dataset schema, then draft the logistic regression model release notes.",57755,58093
+evaltask_000296,Restart and verify the borrower repayment dataset pipeline after a maintenance window.,65850,66935
+evaltask_000297,Resolve the freshness issue in the borrower repayment dataset without changing the ingestion schedule.,68006,68127
+evaltask_000298,Rebuild the smart meter dataset without re-scraping the external sources.,59063,59185
+evaltask_000299,Standardise column formats across the smart meter dataset.,60405,60970
+evaltask_000300,Reduce dimensionality of the smart meter dataset using feature selection.,60776,61328
+evaltask_000301,Get a first energy anomalies baseline without tuning the gradient boosting regressor at all.,61290,62723
+evaltask_000302,"Compute precision, recall and F1 for energy anomalies predictions.",62033,62775
+evaltask_000303,Set up the training pipeline for the gradient boosting regressor.,63472,64209
+evaltask_000304,"Evaluate the gradient boosting regressor on the smart meter dataset, then check fairness across the main segments.",64135,64461
+evaltask_000305,Fit the gradient boosting regressor on the prepared smart meter dataset.,64851,66272
+evaltask_000306,"First reproduce the reported gradient boosting regressor metrics, then investigate the drop in recall.",65783,66264
+evaltask_000307,Draft release notes describing changes to the gradient boosting regressor pipeline.,65802,66663
+evaltask_000308,The smart meter dataset ingestion job fell over again last night.,63920,64014
+evaltask_000309,Restart and verify the smart meter dataset pipeline after a maintenance window.,74269,74808
+evaltask_000310,"First query the production database, then consolidate the extracts into the hospital admissions dataset.",33886,35350
+evaltask_000311,Clean the hospital admissions dataset for patient risk score modelling without altering the original source files.,34834,35205
+evaltask_000312,Build features for the survival analysis model without using information unavailable at prediction time.,34879,35431
+evaltask_000313,Retrain the survival analysis model on the hospital admissions dataset without changing the current hyperparameters.,35638,36637
+evaltask_000314,Compare the survival analysis model against a previous version on the hospital admissions dataset.,36940,37461
+evaltask_000315,Get a first patient risk score baseline without tuning the survival analysis model at all.,38151,38658
+evaltask_000316,"Not convinced by the survival analysis model numbers, look into them.",38360,38767
+evaltask_000317,Write handover notes for the hospital admissions dataset project.,39632,39964
+evaltask_000318,Update pipeline dependencies feeding the hospital admissions dataset.,40415,40718
+evaltask_000319,"First add monitoring for the recurring failure, then refactor the hospital admissions dataset ingestion.",47682,47840
+evaltask_000320,Gather the missing records for the equipment logs dataset without hitting production directly.,25228,25499
+evaltask_000321,Filter out the corrupted rows and afterwards impute what's missing in operating hours.,26631,26825
+evaltask_000322,Not sure what's driving maintenance urgency — dig into it.,26835,27360
+evaltask_000323,"First scale operating hours, then check whether the gradient boosting model still needs the interaction terms.",27694,28913
+evaltask_000324,Compare training time and convergence of the gradient boosting model on the equipment logs dataset.,28995,30322
+evaltask_000325,Stress-test the gradient boosting model against edge cases in the equipment logs dataset.,29880,30298
+evaltask_000326,"Update the README with the new equipment logs dataset schema, then draft the gradient boosting model release notes.",31028,31567
+evaltask_000327,Resolve the freshness issue in the equipment logs dataset without changing the ingestion schedule.,36387,36632
+evaltask_000328,Resolve a data freshness issue affecting the equipment logs dataset.,43626,44062
+evaltask_000329,We're short on records for the internal reports dataset — sort it out.,43067,43495
+evaltask_000330,Standardise column formats across the internal reports dataset.,43662,43935
+evaltask_000331,Investigating class imbalance in key topic extraction within the internal reports dataset.,44535,45068
+evaltask_000332,"Create the lagged variables from document length, then aggregate them at project level.",45620,46056
+evaltask_000333,Fit the topic model on the prepared internal reports dataset.,45658,45909
+evaltask_000334,Assess the topic model on key topic extraction without relying on accuracy as the headline metric.,46204,46426
+evaltask_000335,Set up the training pipeline for the topic model.,47534,47856
+evaltask_000336,Produce a confusion matrix summarising topic model performance on key topic extraction.,47954,48582
+evaltask_000337,"First fit the topic model on a sample, then run the full training on the internal reports dataset.",49001,49310
+evaltask_000338,"Score the topic model on the held-out split, then run an error analysis on the failures.",49057,49393
+evaltask_000339,Document known limitations of the current topic model.,49460,49678
+evaltask_000340,"First add monitoring for the recurring failure, then refactor the internal reports dataset ingestion.",58299,59489
+evaltask_000341,Rebuild the store-level sales dataset without re-scraping the external sources.,67644,68984
+evaltask_000342,Filter out invalid or corrupted rows from the store-level sales dataset.,68354,68908
+evaltask_000343,Build aggregated features summarising promotional calendar at the project level.,68913,69289
+evaltask_000344,Training a SARIMA model from scratch on the updated store-level sales dataset.,69157,69378
+evaltask_000345,Assess the SARIMA model on product demand without relying on accuracy as the headline metric.,69815,70090
+evaltask_000346,Get a first product demand baseline without tuning the SARIMA model at all.,70009,70563
+evaltask_000347,Stress-test the SARIMA model against edge cases in the store-level sales dataset.,70075,70624
+evaltask_000348,Compare training time and convergence of the SARIMA model on the store-level sales dataset.,70159,70593
+evaltask_000349,Run an error analysis on the SARIMA model predictions for product demand.,70638,71020
+evaltask_000350,"Draft the product demand findings first, then turn them into slides for stakeholders.",71079,72287
+evaltask_000351,Update pipeline dependencies feeding the store-level sales dataset.,72664,72934
+evaltask_000352,Resolve the freshness issue in the store-level sales dataset without changing the ingestion schedule.,86715,87143
+evaltask_000353,Collect raw data for the building energy dataset from the source system.,25495,26211
+evaltask_000354,Handle missing observations in the building energy dataset to prepare it for peak load modelling.,26625,27153
+evaltask_000355,Investigating class imbalance in peak load within the building energy dataset.,27122,28145
+evaltask_000356,Training a prophet model from scratch on the updated building energy dataset.,27243,27792
+evaltask_000357,Validate the prophet model on out-of-time data before deployment.,28558,28819
+evaltask_000358,"Draft the peak load findings first, then turn them into slides for stakeholders.",29043,29597
+evaltask_000359,Download and consolidate external data sources for the loan applications dataset.,11575,12699
+evaltask_000360,Something's wrong with loan term in the loan applications dataset.,12420,13568
+evaltask_000361,"Compute summary statistics for the loan applications dataset, then visualise how loan default risk moves over time.",12580,12971
+evaltask_000362,"First scale loan term, then check whether the scorecard model still needs the interaction terms.",13954,14256
+evaltask_000363,Compare training time and convergence of the scorecard model on the loan applications dataset.,14245,14792
+evaltask_000364,"Not convinced by the scorecard model numbers, look into them.",15494,15634
+evaltask_000365,Document known limitations of the current scorecard model.,16909,17837
+evaltask_000366,Add monitoring for a recurring failure in the loan applications dataset pipeline.,23330,23629
+evaltask_000367,"Restart the loan applications dataset pipeline, then verify the overnight load completed correctly.",25370,25485
+evaltask_000368,Rebuild the payments dataset without re-scraping the external sources.,20616,21046
+evaltask_000369,Remove duplicate records from the payments dataset.,20766,21227
+evaltask_000370,Investigating class imbalance in anomalous payments within the payments dataset.,22003,22537
+evaltask_000371,Give the isolation forest model another run with the latest payments dataset.,23193,23827
+evaltask_000372,Assess the isolation forest model on anomalous payments without relying on accuracy as the headline metric.,24448,25390
+evaltask_000373,Document the isolation forest model limitations without disclosing the underlying payments dataset schema.,25062,25853
+evaltask_000374,Update pipeline dependencies feeding the payments dataset.,21044,22063
+evaltask_000375,Update pipeline dependencies feeding the payments dataset.,32880,34359
+evaltask_000376,Fix the failing payments dataset job without taking the pipeline offline.,29294,29470
+evaltask_000377,Check where the customer retention dataset is actually coming from.,74435,75036
+evaltask_000378,Remove duplicate records from the customer retention dataset.,75203,75546
+evaltask_000379,Summarise the customer retention dataset without producing any new visualisations.,75781,76218
+evaltask_000380,Improve signal for subscription cancellation without adding features derived from contract type.,76669,77193
+evaltask_000381,Run cross-validation while training the random forest classifier on the customer retention dataset.,76702,77369
+evaltask_000382,"Not convinced by the random forest classifier numbers, look into them.",78061,78332
+evaltask_000383,Retrain the random forest classifier after incorporating the new features.,79274,79542
+evaltask_000384,"Score the random forest classifier on the held-out split, then run an error analysis on the failures.",79908,80385
+evaltask_000385,Prepare a one-page summary of random forest classifier results for management.,80042,80635
+evaltask_000386,Fix a broken scheduled job feeding the customer retention dataset.,76656,76874
+evaltask_000387,Update pipeline dependencies feeding the customer retention dataset.,82460,82700
+evaltask_000388,Pull the latest records and afterwards check the subscription churn dataset covers the full time range.,8789,9003
+evaltask_000389,Filter out invalid or corrupted rows from the subscription churn dataset.,9503,9984
+evaltask_000390,"Compute summary statistics for the subscription churn dataset, then visualise how customer attrition moves over time.",9682,11070
+evaltask_000391,Build features for the random forest classifier without using information unavailable at prediction time.,10657,11081
+evaltask_000392,Get a first customer attrition baseline without tuning the random forest classifier at all.,11070,11567
+evaltask_000393,Stress-test the random forest classifier against edge cases in the subscription churn dataset.,11628,11904
+evaltask_000394,"Update the README with the new subscription churn dataset schema, then draft the random forest classifier release notes.",11745,12190
+evaltask_000395,Refactor the ingestion pipeline for the subscription churn dataset to reduce runtime.,22003,22211
+evaltask_000396,Download and consolidate external data sources for the product image dataset.,61123,61395
+evaltask_000397,Filter out the corrupted rows and afterwards impute what's missing in image resolution.,61217,62061
+evaltask_000398,"Compute summary statistics for the product image dataset, then visualise how defect presence moves over time.",61806,61982
+evaltask_000399,Build features for the convolutional neural network without using information unavailable at prediction time.,63236,63624
+evaltask_000400,Set up the training pipeline for the convolutional neural network.,64345,64572
+evaltask_000401,Run an error analysis on the convolutional neural network predictions for defect presence.,65638,65957
+evaltask_000402,Write a summary report describing the convolutional neural network results for defect presence.,66198,66747
+evaltask_000403,Rebuild the loan applications dataset without re-scraping the external sources.,8906,9602
+evaltask_000404,Deduplicate the loan applications dataset and then standardise the repayment history column formats.,9956,10311
+evaltask_000405,Investigating class imbalance in creditworthiness within the loan applications dataset.,10435,11813
+evaltask_000406,"repayment history on its own isn't telling us much, work on it.",10775,11020
+evaltask_000407,Run cross-validation while training the scorecard model on the loan applications dataset.,11971,12123
+evaltask_000408,Produce a confusion matrix summarising scorecard model performance on creditworthiness.,12669,12862
+evaltask_000409,Write up the creditworthiness results without waiting for the final scorecard model run.,13284,13778
+evaltask_000410,"First query the production database, then consolidate the extracts into the user interaction dataset.",63462,63661
+evaltask_000411,Fixing encoding issues in the user interaction dataset before further processing.,64303,64478
+evaltask_000412,See if we can squeeze more out of session length for item relevance.,65066,66585
+evaltask_000413,Establishing a baseline matrix factorisation model for item relevance prediction.,65571,66141
+evaltask_000414,The matrix factorisation model was fine last month and now it isn't.,65775,66247
+evaltask_000415,Run cross-validation while training the matrix factorisation model on the user interaction dataset.,66486,67177
+evaltask_000416,Produce a confusion matrix summarising matrix factorisation model performance on item relevance.,67634,67851
+evaltask_000417,Compare training time and convergence of the matrix factorisation model on the user interaction dataset.,68521,68879
+evaltask_000418,"Not convinced by the matrix factorisation model numbers, look into them.",69781,70012
+evaltask_000419,Write a summary report describing the matrix factorisation model results for item relevance.,70724,71419
+evaltask_000420,"Check the pipeline logs, then patch the schema change that broke the user interaction dataset ingestion.",76964,77604
+evaltask_000421,Collect raw data for the conversion funnel dataset from the source system.,60786,61194
+evaltask_000422,Treat the outliers in sample size without imputing any values.,61760,62645
+evaltask_000423,Summarising key findings from the exploratory analysis of the conversion funnel dataset.,63113,64175
+evaltask_000424,"sample size on its own isn't telling us much, work on it.",64114,64757
+evaltask_000425,Debug a training failure encountered while fitting the Bayesian A/B testing model.,64661,65193
+evaltask_000426,"First reproduce the reported Bayesian A/B testing model metrics, then investigate the drop in recall.",65761,66173
+evaltask_000427,"Draft the conversion rate uplift findings first, then turn them into slides for stakeholders.",66250,66666
+evaltask_000428,"First add monitoring for the recurring failure, then refactor the conversion funnel dataset ingestion.",61522,62120
+evaltask_000429,Rebuild the catalogue image dataset without re-scraping the external sources.,26813,27123
+evaltask_000430,Reconcile mismatched identifiers between two versions of the catalogue image dataset.,27075,27259
+evaltask_000431,"Create the lagged variables from edge features, then aggregate them at project level.",28276,29550
+evaltask_000432,Train a convolutional neural network to predict product category using the catalogue image dataset.,28502,30092
+evaltask_000433,Assess the convolutional neural network on product category without relying on accuracy as the headline metric.,28714,29101
+evaltask_000434,"Rebuild the training pipeline, then retrain the convolutional neural network on the updated catalogue image dataset.",30040,30615
+evaltask_000435,Compare the convolutional neural network against a previous version on the catalogue image dataset.,30241,31013
+evaltask_000436,Run cross-validation while training the convolutional neural network on the catalogue image dataset.,30862,31093
+evaltask_000437,Run an error analysis on the convolutional neural network predictions for product category.,31046,31671
+evaltask_000438,Document the convolutional neural network limitations without disclosing the underlying catalogue image dataset schema.,31498,32001
+evaltask_000439,Pull the latest records and afterwards check the product review dataset covers the full time range.,52143,52460
+evaltask_000440,Filter out the corrupted rows and afterwards impute what's missing in review length.,53412,53832
+evaltask_000441,Analyse correlations between review length and complaint category in the product review dataset.,53739,54802
+evaltask_000442,"Rebuild the training pipeline, then retrain the naive Bayes classifier on the updated product review dataset.",54113,54331
+evaltask_000443,Stress-test the naive Bayes classifier against edge cases in the product review dataset.,55069,55270
+evaltask_000444,Write a summary report describing the naive Bayes classifier results for complaint category.,55091,55954
+evaltask_000445,Restart and verify the product review dataset pipeline after a maintenance window.,64172,64572
+evaltask_000446,Download and consolidate external data sources for the customer retention dataset.,56518,57088
+evaltask_000447,Filter out the corrupted rows and afterwards impute what's missing in contract type.,57286,58369
+evaltask_000448,Examine contract type in the customer retention dataset without assuming a normal distribution.,57475,58420
+evaltask_000449,Create lagged variables based on contract type for the customer retention dataset.,58451,58732
+evaltask_000450,Set up cross-validation and then fit the gradient boosting model on the prepared customer retention dataset.,58951,59470
+evaltask_000451,Compare the gradient boosting model against the previous version without retraining either of them.,60069,60238
+evaltask_000452,Run cross-validation while training the gradient boosting model on the customer retention dataset.,60303,60797
+evaltask_000453,Compare the gradient boosting model against the previous version without retraining either of them.,60620,61312
+evaltask_000454,Finalise documentation before closing out the customer attrition project.,60984,61190
+evaltask_000455,Update pipeline dependencies feeding the customer retention dataset.,63757,65073
+evaltask_000456,"Restart the customer retention dataset pipeline, then verify the overnight load completed correctly.",74883,75374
+evaltask_000457,Query the production database to extract data for the store-level sales dataset.,72419,73978
+evaltask_000458,Handle missing observations in the store-level sales dataset to prepare it for product demand modelling.,72526,73326
+evaltask_000459,Investigating class imbalance in product demand within the store-level sales dataset.,73347,73561
+evaltask_000460,Reduce the dimensionality of the store-level sales dataset without discarding promotional calendar.,74620,74843
+evaltask_000461,Run cross-validation while training the temporal fusion transformer on the store-level sales dataset.,75507,75913
+evaltask_000462,Evaluate the temporal fusion transformer on a held-out split of the store-level sales dataset.,76796,77318
+evaltask_000463,Document the data preparation steps applied to the store-level sales dataset.,77920,78298
+evaltask_000464,Query the production database to extract data for the product image dataset.,42716,44179
+evaltask_000465,Standardise column formats across the product image dataset.,43428,43754
+evaltask_000466,"There's something odd in the product image dataset, can't put my finger on it.",44761,45344
+evaltask_000467,"Encode the categorical variables, then test whether they improve defect presence prediction.",44944,45895
+evaltask_000468,Compare training time and convergence of the vision transformer model on the product image dataset.,46256,46896
+evaltask_000469,Investigate a drop in vision transformer model recall after the last product image dataset update.,47555,48648
+evaltask_000470,Debug a training failure encountered while fitting the vision transformer model.,48619,49016
+evaltask_000471,Run an error analysis on the vision transformer model predictions for defect presence.,49204,49627
+evaltask_000472,Updating the project README with the latest product image dataset schema.,50276,50748
+evaltask_000473,Restore the product image dataset pipeline without triggering a full historical backfill.,58664,58848
+evaltask_000474,Resolve a data freshness issue affecting the product image dataset.,49389,50182
+evaltask_000475,Gather historical records to build the customer feedback dataset.,70587,70768
+evaltask_000476,Filter out the corrupted rows and afterwards impute what's missing in star rating.,70829,71017
+evaltask_000477,Build features for the LSTM classifier without using information unavailable at prediction time.,71138,71642
+evaltask_000478,"Whatever we did last time to the LSTM classifier, do it again with the new data.",72276,72660
+evaltask_000479,"Score the LSTM classifier on the held-out split, then run an error analysis on the failures.",73000,73861
+evaltask_000480,Nobody knows how the LSTM classifier works — fix that.,73066,73603
+evaltask_000481,Update pipeline dependencies feeding the customer feedback dataset.,77437,78237
+evaltask_000482,Patch a schema change that broke the customer feedback dataset pipeline.,74814,75613
+evaltask_000483,Set up an automated pipeline to pull new records into the warehouse inventory dataset.,36259,36666
+evaltask_000484,Detect and treat outliers in supplier reliability within the warehouse inventory dataset.,37035,38033
+evaltask_000485,Visualise trends in delivery delay over time using the warehouse inventory dataset.,38014,38587
+evaltask_000486,Set up the training pipeline for the gradient boosting regressor.,38395,39799
+evaltask_000487,"Score the gradient boosting regressor on the held-out split, then run an error analysis on the failures.",39187,39823
+evaltask_000488,"Whatever we did last time to the gradient boosting regressor, do it again with the new data.",40478,41261
+evaltask_000489,"Score the gradient boosting regressor on the held-out split, then run an error analysis on the failures.",40793,41162
+evaltask_000490,They want something on delivery delay for tomorrow.,40875,41272
+evaltask_000491,Requesting access to a new data source needed for the store-level sales dataset.,68025,68289
+evaltask_000492,Remove duplicate records from the store-level sales dataset.,68365,68934
+evaltask_000493,The inputs to the SARIMA model need rethinking.,69488,70072
+evaltask_000494,Compare training time and convergence of the SARIMA model on the store-level sales dataset.,70743,71140
+evaltask_000495,Assessing whether the SARIMA model meets the required performance threshold.,72018,72263
+evaltask_000496,Fit the SARIMA model on the prepared store-level sales dataset.,73342,73696
+evaltask_000497,Assess the SARIMA model on inventory requirements without relying on accuracy as the headline metric.,74640,74786
+evaltask_000498,Draft release notes describing changes to the SARIMA model pipeline.,75183,75614
+evaltask_000499,"Restart the store-level sales dataset pipeline, then verify the overnight load completed correctly.",70820,71237
+evaltask_000500,Rebuild the patient records dataset without re-scraping the external sources.,70875,71599
+evaltask_000501,Resolve inconsistent entries in the patient records dataset without dropping any rows.,71071,71398
+evaltask_000502,"Encode the categorical variables, then test whether they improve length of stay prediction.",71745,72420
+evaltask_000503,Train a logistic regression model to predict length of stay using the patient records dataset.,72299,73555
+evaltask_000504,Stress-test the logistic regression model against edge cases in the patient records dataset.,72603,72982
+evaltask_000505,"Rebuild the training pipeline, then retrain the logistic regression model on the updated patient records dataset.",72927,74405
+evaltask_000506,Check the logistic regression model for fairness across segments of the patient records dataset.,73254,73848
+evaltask_000507,"Whatever we did last time to the logistic regression model, do it again with the new data.",73571,73790
+evaltask_000508,The logistic regression model was fine last month and now it isn't.,74894,75774
+evaltask_000509,Write up the length of stay results without waiting for the final logistic regression model run.,75966,77225
+evaltask_000510,Retrieving additional records is required to complete the news articles dataset.,71493,71931
+evaltask_000511,Clean the news articles dataset for document category modelling without altering the original source files.,72030,72668
+evaltask_000512,Check for seasonality patterns related to keyword frequency in the news articles dataset.,73204,73563
+evaltask_000513,Reduce dimensionality of the news articles dataset using feature selection.,74391,75705
+evaltask_000514,Compare training time and convergence of the fine-tuned summarisation model on the news articles dataset.,74781,75192
+evaltask_000515,Assessing whether the fine-tuned summarisation model meets the required performance threshold.,76091,77489
+evaltask_000516,Run cross-validation while training the fine-tuned summarisation model on the news articles dataset.,77266,77754
+evaltask_000517,Assess the fine-tuned summarisation model on document category without relying on accuracy as the headline metric.,77778,77909
+evaltask_000518,Put together whatever we have on the news articles dataset for the handover.,78761,79126
+evaltask_000519,Restart and verify the news articles dataset pipeline after a maintenance window.,78316,79729
+evaltask_000520,Collect raw data for the smart meter dataset from the source system.,23336,24415
+evaltask_000521,Clean missing values in the smart meter dataset before training the gradient boosting regressor.,24274,24463
+evaltask_000522,Investigating class imbalance in hourly energy consumption within the smart meter dataset.,25288,25468
+evaltask_000523,Build features for the gradient boosting regressor without using information unavailable at prediction time.,26228,27258
+evaltask_000524,Run cross-validation while training the gradient boosting regressor on the smart meter dataset.,27331,27577
+evaltask_000525,Produce a confusion matrix summarising gradient boosting regressor performance on hourly energy consumption.,28436,28711
+evaltask_000526,"Update the README with the new smart meter dataset schema, then draft the gradient boosting regressor release notes.",29200,30434
+evaltask_000527,Refactor the ingestion pipeline for the smart meter dataset to reduce runtime.,38485,39724
+evaltask_000528,"The smart meter dataset numbers look stale, find out why.",30018,30481
+evaltask_000529,Patch a schema change that broke the smart meter dataset pipeline.,35510,36865
+evaltask_000530,Gather the missing records for the A/B test results dataset without hitting production directly.,23203,23800
+evaltask_000531,Handle missing observations in the A/B test results dataset to prepare it for statistical significance modelling.,23339,24398
+evaltask_000532,Summarise the A/B test results dataset without producing any new visualisations.,24085,24400
+evaltask_000533,"Encode the categorical variables, then test whether they improve statistical significance prediction.",24722,26062
+evaltask_000534,Set up cross-validation and then fit the Bayesian A/B testing model on the prepared A/B test results dataset.,25814,25970
+evaltask_000535,"First reproduce the reported Bayesian A/B testing model metrics, then investigate the drop in recall.",26249,26671
+evaltask_000536,Put together whatever we have on the A/B test results dataset for the handover.,27227,28067
+evaltask_000537,Resolve the freshness issue in the A/B test results dataset without changing the ingestion schedule.,24473,24699
+evaltask_000538,Update pipeline dependencies feeding the A/B test results dataset.,41762,41975
+evaltask_000539,"The catalogue image dataset doesn't go back far enough, see what you can do.",43877,44352
+evaltask_000540,"First fix the encoding issues in the catalogue image dataset, then reconcile the mismatched identifiers.",45300,45550
+evaltask_000541,Run a first exploratory pass over the catalogue image dataset to understand its structure.,46221,46972
+evaltask_000542,Retrain the convolutional neural network after incorporating the new features.,47313,49068
+evaltask_000543,The convolutional neural network was fine last month and now it isn't.,48718,49212
+evaltask_000544,Write a summary report describing the convolutional neural network results for defect presence.,49968,50715
+evaltask_000545,Resolve the freshness issue in the catalogue image dataset without changing the ingestion schedule.,55482,56003
+evaltask_000546,Resolve the freshness issue in the catalogue image dataset without changing the ingestion schedule.,55999,56264
+evaltask_000547,Extract records for the catalogue image dataset without pulling any personally identifiable fields.,2356,2776
+evaltask_000548,Detect and treat outliers in pixel intensity within the catalogue image dataset.,2748,3055
+evaltask_000549,Compare pixel intensity distributions across different segments of the catalogue image dataset.,4097,4466
+evaltask_000550,"Create the lagged variables from pixel intensity, then aggregate them at project level.",5130,5646
+evaltask_000551,Run cross-validation while training the fine-tuned ResNet model on the catalogue image dataset.,6510,6863
+evaltask_000552,Run an error analysis on the fine-tuned ResNet model predictions for defect presence.,7538,9059
+evaltask_000553,"Draft the defect presence findings first, then turn them into slides for stakeholders.",8102,8382
+evaltask_000554,"Restart the catalogue image dataset pipeline, then verify the overnight load completed correctly.",21054,21940
+evaltask_000555,Collect raw data for the loan applications dataset from the source system.,66155,66781
+evaltask_000556,Clean missing values in the loan applications dataset before training the scorecard model.,67427,67992
+evaltask_000557,Investigating class imbalance in creditworthiness within the loan applications dataset.,67504,68414
+evaltask_000558,See if we can squeeze more out of loan term for creditworthiness.,68373,69042
+evaltask_000559,Establishing a baseline scorecard model for creditworthiness prediction.,69254,69752
+evaltask_000560,"Not convinced by the scorecard model numbers, look into them.",70192,70646
+evaltask_000561,Set up cross-validation and then fit the scorecard model on the prepared loan applications dataset.,70767,71207
+evaltask_000562,Compare the scorecard model against the previous version without retraining either of them.,71489,71682
+evaltask_000563,Compare training time and convergence of the scorecard model on the loan applications dataset.,72756,73224
+evaltask_000564,Check the scorecard model for fairness across segments of the loan applications dataset.,73720,73902
+evaltask_000565,Nobody knows how the scorecard model works — fix that.,74385,75740
+evaltask_000566,Requesting access to a new data source needed for the customer churn dataset.,10372,11519
+evaltask_000567,Standardise column formats across the customer churn dataset.,10605,11107
+evaltask_000568,See if we can squeeze more out of usage frequency for subscription cancellation.,11199,11742
+evaltask_000569,Retrain the random forest classifier after incorporating the new features.,11924,12261
+evaltask_000570,Validate the random forest classifier without touching the held-out test split.,12117,12600
+evaltask_000571,Fit the random forest classifier on the prepared customer churn dataset.,12199,12621
+evaltask_000572,Assessing whether the random forest classifier meets the required performance threshold.,12714,13205
+evaltask_000573,They want something on subscription cancellation for tomorrow.,13523,14102
+evaltask_000574,"Restart the customer churn dataset pipeline, then verify the overnight load completed correctly.",26858,27326
+evaltask_000575,Restart and verify the customer churn dataset pipeline after a maintenance window.,20325,21344
+evaltask_000576,Resolve the freshness issue in the customer churn dataset without changing the ingestion schedule.,23264,23452
+evaltask_000577,"First query the production database, then consolidate the extracts into the A/B test results dataset.",44508,44772
+evaltask_000578,Treat the outliers in variance reduction covariate without imputing any values.,44575,45172
+evaltask_000579,Create lagged variables based on variance reduction covariate for the A/B test results dataset.,44677,45059
+evaltask_000580,Compare training time and convergence of the difference-in-differences model on the A/B test results dataset.,45788,46314
+evaltask_000581,"Not convinced by the difference-in-differences model numbers, look into them.",46741,47295
+evaltask_000582,Training a difference-in-differences model from scratch on the updated A/B test results dataset.,47414,47927
+evaltask_000583,"Not convinced by the difference-in-differences model numbers, look into them.",47956,48656
+evaltask_000584,Prepare slides presenting the difference-in-differences model performance to stakeholders.,48654,49070
+evaltask_000585,Scrape supplementary records to enrich the internal reports dataset.,38045,38310
+evaltask_000586,Resolve inconsistent entries in the internal reports dataset without dropping any rows.,38126,38553
+evaltask_000587,Investigating class imbalance in key topic extraction within the internal reports dataset.,38165,38404
+evaltask_000588,"The extractive summarisation pipeline isn't picking anything up, have a go at it.",39333,40881
+evaltask_000589,"Not convinced by the extractive summarisation pipeline numbers, look into them.",40570,40857
+evaltask_000590,Prepare slides presenting the extractive summarisation pipeline performance to stakeholders.,40586,41103
+evaltask_000591,Fix a broken scheduled job feeding the internal reports dataset.,56595,57870
+evaltask_000592,Retrieving additional records is required to complete the demand forecasting dataset.,65663,66102
+evaltask_000593,Investigate and correct inconsistent entries in the demand forecasting dataset.,66028,66714
+evaltask_000594,Check for seasonality patterns related to seasonality in the demand forecasting dataset.,67238,67658
+evaltask_000595,"First scale seasonality, then check whether the gradient boosting regressor still needs the interaction terms.",67328,68882
+evaltask_000596,Fit the gradient boosting regressor on the prepared demand forecasting dataset.,68164,68942
+evaltask_000597,"Compute precision, recall and F1 for inventory requirements predictions.",68781,68946
+evaltask_000598,Prepare slides presenting the gradient boosting regressor performance to stakeholders.,69201,70422
+evaltask_000599,Fix a broken scheduled job feeding the demand forecasting dataset.,74509,74836
+evaltask_000600,Download and consolidate external data sources for the smart meter dataset.,74285,75594
