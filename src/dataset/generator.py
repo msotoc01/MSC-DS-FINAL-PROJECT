@@ -8,7 +8,7 @@ attributes the agent pipeline must later infer.
 Two independent splits of the template pool exist:
   - "repo": templates used to build the historical repository (the knowledge base)
   - "ood" : templates held out from the repository, used only for evaluation tasks,
-            so that "unseen description" genuinely means unseen. Backs RQ4.
+            so that "unseen description" genuinely means unseen.
 """
 
 import random

@@ -16,8 +16,6 @@ import argparse
 import sys
 from pathlib import Path
 
-import pandas as pd
-
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))          
 sys.path.insert(0, str(ROOT / "src"))
@@ -73,7 +71,35 @@ def main():
 
     total_work = sum(t.estimated_duration for t in batch)
     print("=" * 72)
-    print(f"BATCH: {len(batch)} tasks | total work {total_work} min ")
+    print(f"BATCH: {len(batch)} tasks | total work {total_work} min "
+          f"({total_work / 60:.1f} h) | window {args.window_days} day(s)")
+    print(f"BATCH: {len(batch)} tasks | total work {as_working_days(total_work)}")
+    print(f"context groups present: {sorted({t.context_group for t in batch})}")
+    print(f"projects present: {len({t.project_id for t in batch})}")
+    print("=" * 72)
+
+    # Run every baseline on the same batch
+    schedules = {}
+    for name, scheduler in ALL_BASELINES.items():
+        if scheduler is None:          # Agent-only not implemented yet
+            continue
+        schedules[name] = scheduler(list(batch))
+
+    # Compare
+    print("\n-- Metrics by method --")
+    print(metrics.scheduling_summary(schedules).round(3).to_string())
+
+    # Dependency violations (baselines do not enforce them)
+    print("\n-- Dependency violations per method --")
+    for name, sched in schedules.items():
+        order = {t.task_id: t for t in batch}
+        ordered_tasks = [order[tid] for tid in sched.sort_values("position")["task_id"]]
+        print(f"  {name:10s} {len(check_dependencies(ordered_tasks))}")
+
+    # Show one schedule in full
+    sample_method = "EDF"
+    print(f"\n-- Schedule produced by {sample_method} (first 10 rows) --")
+    print(schedules[sample_method].head(10).to_string(index=False))
 
 
 if __name__ == "__main__":
