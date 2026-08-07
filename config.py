@@ -31,3 +31,5 @@ CONTEXT_SWITCH_COST_MIN = 5    # minutes lost when consecutive tasks differ in c
 SOLVER_TIME_LIMIT_S = 60       # CBC time limit; accept best feasible solution beyond it
 
 WORKING_MINUTES_PER_DAY = 480
+
+LLM_MODEL_ID = "gpt-4o-mini"
