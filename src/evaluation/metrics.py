@@ -1,13 +1,9 @@
 """
-All metrics in one place — the two-level evaluation framework (proposal §6).
+All metrics in one place — the two-level evaluation framework.
 
-Nivel 1 (attribute inference): accuracy Y F1 para los TRES atributos
-categóricos (category, context_group, priority) + MAE para duración.
+Level 1 attribute inference
 
-Nivel 2 (scheduling quality): las TRES métricas del proposal — makespan,
-nº de context switches y deadline satisfaction rate. (Total lateness puede
-calcularse como métrica auxiliar de diagnóstico, pero la comparación
-principal del report usa las tres del proposal.)
+LEval 2 scheduling quality
 """
 
 import pandas as pd

@@ -1,7 +1,7 @@
 """
 MILP scheduler — the proposed system (PuLP + CBC).
 
-Objective, three weighted terms:
+Objective, three weighted terms: (needed to be adjust)
     W_MAKESPAN            * makespan
     W_CONTEXT_SWITCH      * context switching cost
     W_DEADLINE_VIOLATION  * total lateness
@@ -10,15 +10,6 @@ Formulation: positional. x[i][p] = 1 iff task i runs in position p of the
 sequence. A single executor runs tasks in series, so there are exactly n
 positions for n tasks. Think of x as an n x n table in which the solver must
 place one 1 per row and one 1 per column; the location of those 1s is the order.
-
-Hard vs soft constraints — a deliberate asymmetry, worth stating in the report:
-  - Dependencies are HARD. Running a task before its input exists is not a
-    trade-off, it is invalid.
-  - Deadlines are SOFT (penalised lateness). The proposal lists them among the
-    hard constraints but also penalises violations in the objective; enforcing
-    them strictly would make any saturated batch Infeasible and return no
-    schedule at all, and would make the deadline satisfaction rate metric
-    meaningless.
 
 Like every baseline, this module only decides the ORDER. Times are then
 assigned by sequence_to_schedule(), identically for all methods, so the

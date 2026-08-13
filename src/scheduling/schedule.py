@@ -4,17 +4,6 @@ Common output format for ALL schedulers (MILP and baselines).
 A "schedule" is a DataFrame with one row per task and fixed columns. Because
 every scheduler returns this exact format, metrics and plots are written once
 and work for all of them.
-
-Design decisions (documented in the report):
-  - Single executor, tasks run in series (proposal's positional model).
-  - A task cannot start before it arrives:  start = max(clock, arrival_time).
-  - Switching cost is paid BETWEEN tasks, pushing the next start forward, and
-    therefore counts towards makespan. It is charged only when two tasks of
-    different context_group run back-to-back WITHOUT an idle gap in between
-    (if the executor already waited for arrival, no extra cognitive cost).
-  - The first task never pays a switch (no previous context).
-  - This function only computes times. It does NOT validate dependencies;
-    use check_dependencies() for that.
 """
 
 import pandas as pd
