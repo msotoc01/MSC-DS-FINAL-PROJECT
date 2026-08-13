@@ -34,7 +34,7 @@ LOOP_STAGES = ["model_training", "model_evaluation"]
 PRIORITY_LEVELS = {"low": 1, "medium": 2, "high": 3}
 
 # Deadline slack (minutes of buffer after task duration) by priority: tighter for urgent work.
-DEADLINE_SLACK_MINUTES = {"low": (240, 1440), "medium": (120, 480), "high": (30, 180)}
+DEADLINE_SLACK_MINUTES = {"low": (240, 2400), "medium": (240, 1920), "high": (240, 960)}
 
 # Out-of-distribution template split
 OOD_SEED = 20260717            

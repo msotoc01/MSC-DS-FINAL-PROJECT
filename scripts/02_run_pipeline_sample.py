@@ -5,11 +5,7 @@ This is the end-to-end check of the scheduling half of the system:
     CSV -> Task -> ordering -> timed schedule -> metrics
 
 It deliberately uses GROUND-TRUTH attributes rather than inferred ones, so any
-difference between methods comes from the scheduling decision alone. Once the
-agent pipeline exists this becomes the "perfect information" arm of the
-comparison required by proposal §6, and a second arm is added using
-pipeline.enrich_tasks().
-
+difference between methods comes from the scheduling decision alone.
 """
 
 import argparse
@@ -23,7 +19,8 @@ sys.path.insert(0, str(ROOT / "src"))
 from dataset.loaders import load_evaluation_tasks 
 from scheduling.baselines import ALL_BASELINES    
 from scheduling.schedule import check_dependencies, as_working_days
-from evaluation import metrics                 
+from evaluation import metrics   
+from scheduling import milp              
 
 MINUTES_PER_DAY = 24 * 60
 
@@ -89,6 +86,13 @@ def main():
     print("\n-- Metrics by method --")
     print(metrics.scheduling_summary(schedules).round(3).to_string())
 
+    #  MILP
+    sched, info = milp.solve(list(batch))
+    print(f"\nMILP: {info['status']} in {info['solve_time_s']}s "
+        f"(objective {info['objective']:.0f})")
+    if len(sched):
+        schedules["MILP"] = sched
+
     # Dependency violations (baselines do not enforce them)
     print("\n-- Dependency violations per method --")
     for name, sched in schedules.items():
@@ -97,9 +101,9 @@ def main():
         print(f"  {name:10s} {len(check_dependencies(ordered_tasks))}")
 
     # Show one schedule in full
-    sample_method = "EDF"
-    print(f"\n-- Schedule produced by {sample_method} (first 10 rows) --")
-    print(schedules[sample_method].head(10).to_string(index=False))
+    # sample_method = "EDF"
+    # print(f"\n-- Schedule produced by {sample_method} (first 10 rows) --")
+    # print(schedules[sample_method].head(10).to_string(index=False))
 
 
 if __name__ == "__main__":
