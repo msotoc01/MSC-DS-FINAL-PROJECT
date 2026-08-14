@@ -29,13 +29,13 @@ W_PROJECT_SWITCH = 0.0
 
 # (Ajdust)
 CONTEXT_SWITCH_COST_MIN = 5    # minutes lost when consecutive tasks differ in context_group
-SOLVER_TIME_LIMIT_S = 60       # CBC time limit; accept best feasible solution beyond it
+SOLVER_TIME_LIMIT_S = 120       # CBC time limit; accept best feasible solution beyond it
 
 # Backlog
 # (Adjust)
 WORKING_MINUTES_PER_DAY = 480
 WORK_DAYS_PER_BACKLOG = 5     # planning horizon: one working week
-OVERLOAD_FACTOR = 1.2     # times the work that fits in the horizon
-MAX_PROJECTS_PER_BACKLOG = 5
+OVERLOAD_FACTOR = 1.5     # times the work that fits in the horizon
+MAX_PROJECTS_PER_BACKLOG = 8
 
 LLM_MODEL_ID = "gpt-4o-mini"
