@@ -33,8 +33,10 @@ LOOP_STAGES = ["model_training", "model_evaluation"]
 
 PRIORITY_LEVELS = {"low": 1, "medium": 2, "high": 3}
 
-# Deadline slack (minutes of buffer after task duration) by priority: tighter for urgent work.
-DEADLINE_SLACK_MINUTES = {"low": (240, 2400), "medium": (240, 1920), "high": (240, 960)}
+# Deadline window (minutes the task is due to) by priority: tighter for urgent work.
+DEADLINE_WINDOW_MINUTES = {"low": (240, 2400), "medium": (240, 1920), "high": (240, 960)}
+
+MIN_DEADLINE_MARGIN = 60   # minutes; smallest slack any task gets over its duration
 
 # Out-of-distribution template split
 OOD_SEED = 20260717            
@@ -91,8 +93,8 @@ def _make_task(category, project_id, task_counter, domain_key, vocab, arrival_ti
     duration = rng.randint(lo, hi)
 
     priority = _sample_priority(meta["priority_weights"], rng)
-    slack_lo, slack_hi = DEADLINE_SLACK_MINUTES[priority]
-    deadline = arrival_time + duration + rng.randint(slack_lo, slack_hi)
+    due_lo, due_hi = DEADLINE_WINDOW_MINUTES[priority]
+    deadline = arrival_time + max(rng.randint(due_lo, due_hi), duration + MIN_DEADLINE_MARGIN)
 
     return Task(
         task_id=f"{id_prefix}_{task_counter:06d}",
