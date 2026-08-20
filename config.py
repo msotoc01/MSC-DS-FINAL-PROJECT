@@ -13,6 +13,8 @@ HISTORICAL_CSV = RAW_DIR / "historical_repository.csv"
 EVALUATION_CSV = RAW_DIR / "evaluation_set.csv"              # visible columns only
 EVALUATION_GT_CSV = RAW_DIR / "evaluation_ground_truth.csv"  # hidden attributes
 
+LLM_CACHE_DIR = DATA_DIR / "llm_cache"  
+
 # Reproducibility
 RANDOM_SEED = 42        # default seed for dataset generation and batching
 
@@ -34,8 +36,8 @@ SOLVER_TIME_LIMIT_S = 120       # CBC time limit; accept best feasible solution 
 # Backlog
 # (Adjust)
 WORKING_MINUTES_PER_DAY = 480
-WORK_DAYS_PER_BACKLOG = 5     # planning horizon: one working week
+WORK_DAYS_PER_BACKLOG = 2     # planning horizon: one working week
 OVERLOAD_FACTOR = 1.5     # times the work that fits in the horizon
-MAX_PROJECTS_PER_BACKLOG = 8
+MAX_PROJECTS_PER_BACKLOG = 5
 
 LLM_MODEL_ID = "gpt-4o-mini"

@@ -89,9 +89,8 @@ def build_batch(tasks, work_days=None, seed=42):
     batch = copy.deepcopy(batch)      # never mutate the caller's tasks
 
     # 6. Everything is already queued at t=0
-    offset = min(t.arrival_time for t in batch)
     for t in batch:
-        t.deadline -= offset          # deadlines stay relative to the period start
+        t.deadline = t.deadline - t.arrival_time   # slack, measured from t = 0
         t.arrival_time = 0            # no arrival constraint inside a backlog
 
     return batch
