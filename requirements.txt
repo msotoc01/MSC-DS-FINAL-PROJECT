@@ -1,24 +1,24 @@
 # Core
-pandas
-numpy
+pandas==3.0.5
+numpy==2.5.1
 
 # Agents / LLM
-smolagents
-openai
-python-dotenv
+smolagents==1.26.0
+openai==2.53.0
+python-dotenv==1.2.2
 
 # Retrieval
-sentence-transformers
+sentence-transformers==5.6.1
 
 # Optimisation (CBC solver ships with PuLP)
-pulp
+PuLP==3.3.2
 
 # Evaluation
-scikit-learn
+scikit-learn==1.9.0
 
 # Interface & plots
-streamlit
-plotly
+streamlit==1.61.0
+plotly==6.9.0
 
 # Dev
-pytest
+pytest==9.1.1

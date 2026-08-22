@@ -15,6 +15,8 @@ EVALUATION_GT_CSV = RAW_DIR / "evaluation_ground_truth.csv"  # hidden attributes
 
 LLM_CACHE_DIR = DATA_DIR / "llm_cache"  
 
+EMBEDDINGS_FILE = DATA_DIR / "embeddings" / "historical_embeddings.npy"
+
 # Reproducibility
 RANDOM_SEED = 42        # default seed for dataset generation and batching
 
@@ -40,4 +42,9 @@ WORK_DAYS_PER_BACKLOG = 2     # planning horizon: one working week
 OVERLOAD_FACTOR = 1.5     # times the work that fits in the horizon
 MAX_PROJECTS_PER_BACKLOG = 5
 
+# LLM
 LLM_MODEL_ID = "gpt-4o-mini"
+
+# Retrieval
+EMBEDDING_MODEL_ID = "sentence-transformers/all-MiniLM-L6-v2"
+RETRIEVAL_TOP_K = 5      # few-shot examples passed to the inference agent
