@@ -73,53 +73,30 @@ def main():
     assert not leaked, f"OOD contamination: {len(leaked)} descriptions also in the repository"
 
     # Validation report
-    print("=" * 60)
-    print("DATASET GENERATION SUMMARY")
-    print("=" * 60)
-    print(f"Historical repository: {len(repo_df)} tasks, {repo_df['project_id'].nunique()} projects")
-    print(f"Evaluation set:        {len(eval_df)} tasks, {eval_df['project_id'].nunique()} projects")
-    print(f"  - in-distribution (repo templates): {(eval_df['template_source'] == 'repo').sum()}")
-    print(f"  - out-of-distribution (unseen templates): {(eval_df['template_source'] == 'ood').sum()}")
-    print(f"  - OOD contamination check: passed (0 overlapping descriptions)")
-    print()
-    print("-- Repository: category distribution --")
-    print(repo_df["category"].value_counts())
-    print()
-    print("-- Repository: context_group distribution --")
-    print(repo_df["context_group"].value_counts())
-    print()
-    print("-- Repository: domain distribution --")
-    print(repo_df["domain"].value_counts())
-    print()
-    print("-- Repository: priority distribution --")
-    print(repo_df["priority"].value_counts())
-    print()
-    print("-- Variation levels (proposal §9) --")
-    levels = pd.DataFrame({
-        "repository": repo_df["variation_level"].value_counts(),
-        "evaluation": eval_df["variation_level"].value_counts(),
-    }).fillna(0).astype(int)
-    levels["repo %"] = (levels["repository"] / len(repo_df) * 100).round(1)
-    levels["eval %"] = (levels["evaluation"] / len(eval_df) * 100).round(1)
-    print(levels)
-    print()
-    print(f"Unique descriptions in repository: {repo_df['description'].nunique()} / {len(repo_df)} "
-          f"({repo_df['description'].nunique() / len(repo_df):.1%} unique)")
-    print(f"Duration range: {repo_df['estimated_duration'].min()}-{repo_df['estimated_duration'].max()} min, "
-          f"mean {repo_df['estimated_duration'].mean():.1f} min")
-    n_with_deps = (repo_df["dependencies"] != "").sum()
-    print(f"Tasks with dependencies: {n_with_deps} / {len(repo_df)} ({n_with_deps / len(repo_df):.1%})")
-    print()
-    print("Sample tasks:")
-    with pd.option_context("display.max_colwidth", 90):
-        print(repo_df[["description", "category", "context_group",
-                       "variation_level", "estimated_duration", "priority",
-                       "dependencies"]].sample(8, random_state=1).to_string())
-    print()
-    print(f"Files written to: {OUTPUT_DIR}")
-    print(f"  historical_repository.csv    ({len(repo_df.columns)} columns)")
-    print(f"  evaluation_set.csv           ({len(eval_visible.columns)} columns, visible only)")
-    print(f"  evaluation_ground_truth.csv  ({len(eval_ground_truth.columns)} columns, hidden)")
+    print(f"repository: {len(repo_df)} tasks, {repo_df['project_id'].nunique()} projects")
+    print(f"evaluation: {len(eval_df)} tasks, {eval_df['project_id'].nunique()} projects")
+    print(f"  in-distribution:     {(eval_df['template_source'] == 'repo').sum()}")
+    print(f"  out-of-distribution: {(eval_df['template_source'] == 'ood').sum()}")
+    print("  contamination check: passed")
+
+    # Proportions rather than counts, and both sets side by side: what matters
+    # is that the evaluation set mirrors the repository, not the raw totals.
+    for column in ["category", "context_group", "priority", "variation_level"]:
+        share = pd.DataFrame({
+            "repository": repo_df[column].value_counts(normalize=True),
+            "evaluation": eval_df[column].value_counts(normalize=True),
+        }).fillna(0).round(3)
+        print(f"\n-- {column} --")
+        print(share.to_string())
+
+    unique = repo_df["description"].nunique()
+    with_deps = (repo_df["dependencies"] != "").sum()
+    print(f"\nunique descriptions: {unique}/{len(repo_df)} ({unique / len(repo_df):.1%})")
+    print(f"tasks with dependencies: {with_deps}/{len(repo_df)} ({with_deps / len(repo_df):.1%})")
+    print(f"duration: {repo_df['estimated_duration'].min()}-"
+          f"{repo_df['estimated_duration'].max()} min, "
+          f"mean {repo_df['estimated_duration'].mean():.0f}")
+    print(f"\nwritten to {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":

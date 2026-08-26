@@ -26,7 +26,8 @@ def get_encoder():
     reads the cached index should not pay that."""
     global _encoder
     if _encoder is None:
-        from sentence_transformers import SentenceTransformer
+        # takes 7 secs every time its imported (better to import only when needed)
+        from sentence_transformers import SentenceTransformer 
         _encoder = SentenceTransformer(config.EMBEDDING_MODEL_ID)
     return _encoder
 
@@ -70,7 +71,7 @@ def retrieve(descriptions, historical_df: pd.DataFrame,
     )
 
     results = []
-    for similarities in queries @ embeddings.T:   # every query vs every task
+    for similarities in queries @ embeddings.T:   # every query vs every task / cosine
         top = np.argsort(-similarities)[:k]
         frame = historical_df.iloc[top].copy()    # copy: never mutate the repo
         frame["similarity"] = similarities[top]

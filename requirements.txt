@@ -4,6 +4,7 @@ numpy==2.5.1
 
 # Agents / LLM
 smolagents==1.26.0
+smolagents[openai]==1.26.0
 openai==2.53.0
 python-dotenv==1.2.2
 
