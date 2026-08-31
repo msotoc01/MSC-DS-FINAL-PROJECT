@@ -22,19 +22,6 @@ import config
 from scheduling.schedule import sequence_to_schedule
 
 
-def _big_m(tasks, switch_cost: int) -> int:
-    """An upper bound on any time in this instance.
-
-    Big-M must be large enough never to bind, but as TIGHT as possible: an
-    oversized M weakens the LP relaxation and causes numerical instability,
-    which makes CBC crawl. Latest arrival + all durations + all possible
-    switches cannot be exceeded by any feasible schedule.
-    """
-    return (max(t.arrival_time for t in tasks)
-            + sum(t.estimated_duration for t in tasks)
-            + len(tasks) * switch_cost)
-
-
 def build_model(tasks: list,
                 switch_cost: int = config.CONTEXT_SWITCH_COST_MIN,
                 w_makespan: float = config.W_MAKESPAN,
@@ -44,7 +31,6 @@ def build_model(tasks: list,
     n = len(tasks)
     positions = range(n)
     indices = range(n)
-    big_m = _big_m(tasks, switch_cost)
 
     model = pulp.LpProblem("task_scheduling", pulp.LpMinimize)
 
@@ -95,14 +81,6 @@ def build_model(tasks: list,
     # Positions run in series, paying the switch cost in between.
     for p in range(1, n):
         model += start[p] >= end[p - 1] + switch_cost * s[p], f"chain_{p}"
-
-    # Arrival, via Big-M: "if task i is at p then start[p] >= arrival_i".
-    # x=1 -> the M term vanishes and the constraint bites.
-    # x=0 -> the right side goes hugely negative and the constraint is inert.
-    for p in positions:
-        for i in indices:
-            model += (start[p] >= tasks[i].arrival_time - big_m * (1 - x[i][p]),
-                        f"arrival_{i}_{p}")
 
     # Makespan as >= every end; minimising pushes it down to the true maximum.
     for p in positions:
@@ -171,14 +149,13 @@ def solve(tasks: list, time_limit: int = config.SOLVER_TIME_LIMIT_S, **weights):
     return sequence_to_schedule(order), info
 
 
-def re_optimize(pending_tasks: list, new_task, clock: int = 0, **weights):
-    """Dynamic re-optimisation when a new task arrives mid-execution.
+def re_optimize(pending_tasks: list, new_task, **weights):
+    """Dynamic re-optimisation when a new task arrives.
 
-    Completed tasks are fixed and simply dropped; whatever is still pending,
-    plus the newcomer, is re-solved from the current clock. Callers keep the
-    previous schedule so the UI can show what changed and why.
+    All tasks are treated as available from the start of the new period, which 
+    is the same assumption the model makes everywhere else.
+
+    Callers keep the previous schedule so the interface can show what changed.
     """
     tasks = list(pending_tasks) + [new_task]
-    for t in tasks:                       # nothing may start before "now"
-        t.arrival_time = max(t.arrival_time, clock)
     return solve(tasks, **weights)

@@ -26,6 +26,5 @@ embeddings = get_index(repo, rebuild=True)
 print(f"\nindex: {embeddings.shape} -> {config.EMBEDDINGS_FILE}")
 
 # A description from the repository must retrieve itself, with similarity ~1.
-# Cheapest possible check that the encoding and the row order are correct.
 hit = retrieve(repo.description.iloc[0], repo, embeddings, k=1)
 print(f"self-retrieval similarity: {hit.similarity.iloc[0]:.4f} (expected ~1.0)")

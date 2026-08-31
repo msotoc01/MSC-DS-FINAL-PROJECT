@@ -10,13 +10,7 @@ apart and report results from subtly different scenarios.
 
 import copy
 import random
-
 import config
-
-# The chosen window must hold more work than the backlog needs
-WINDOW_WORK_MARGIN = 1.5
-# Acumulated work of 3 weks
-WINDOW_SPAN_DAYS = 3
 
 
 def build_batch(tasks, work_days=None, seed=42):
@@ -34,7 +28,7 @@ def build_batch(tasks, work_days=None, seed=42):
 
     capacity = work_days * config.WORKING_MINUTES_PER_DAY
     target_work = capacity * config.OVERLOAD_FACTOR
-    window = int(capacity * WINDOW_SPAN_DAYS)          # arrivals accumulate over one horizon's worth of time
+    window = int(capacity * config.WINDOW_SPAN_HORIZONS)          # arrivals accumulate over one horizon's worth of time
 
     arrivals = sorted(t.arrival_time for t in tasks)
 
@@ -44,7 +38,7 @@ def build_batch(tasks, work_days=None, seed=42):
         inside = [t for t in tasks if start <= t.arrival_time < start + window]
         projects = {t.project_id for t in inside}
         work = sum(t.estimated_duration for t in inside)
-        if len(projects) >= config.MAX_PROJECTS_PER_BACKLOG and work >= target_work * WINDOW_WORK_MARGIN:
+        if len(projects) >= config.PROJECTS_PER_BACKLOG and work >= target_work * config.WINDOW_WORK_MARGIN:
             viable.append(start)
 
     if not viable:
@@ -59,7 +53,7 @@ def build_batch(tasks, work_days=None, seed=42):
     inside = [t for t in tasks if start <= t.arrival_time < start + window]
 
     all_projects = sorted({t.project_id for t in inside})     # sorted => reproducible
-    chosen = set(rng.sample(all_projects, config.MAX_PROJECTS_PER_BACKLOG))
+    chosen = set(rng.sample(all_projects, config.PROJECTS_PER_BACKLOG))
 
     candidates = sorted(
         (t for t in inside if t.project_id in chosen),

@@ -3,18 +3,20 @@ Generate the synthetic dataset: historical repository + evaluation set (+ hidden
 ground truth for the evaluation set).
 """
 
-import argparse
 import random
 import sys
 from pathlib import Path
 
 import pandas as pd
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "src"))
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from dataset.generator import generate_projects, tasks_to_records 
+import config
 
-OUTPUT_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
+OUTPUT_DIR = config.RAW_DIR
 
 EVAL_VISIBLE_COLUMNS = ["task_id", "description", "arrival_time", "deadline"]
 
@@ -33,26 +35,22 @@ EVAL_HIDDEN_COLUMNS = [
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--n-repository", type=int, default=4500)
-    parser.add_argument("--n-evaluation", type=int, default=600)
-    parser.add_argument("--seed", type=int, default=42)
-    args = parser.parse_args()
 
-    rng = random.Random(args.seed)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Historical repository (full attributes, repo-only templates)
     repo_tasks = generate_projects(
-        args.n_repository, rng, split="repo", id_prefix="task", project_prefix="proj"
+        config.N_HISTORICAL_TASKS, random.Random(config.RANDOM_SEED),
+        split="repo", id_prefix="task", project_prefix="proj"
     )
+    
     repo_df = pd.DataFrame(tasks_to_records(repo_tasks))
     repo_df.to_csv(OUTPUT_DIR / "historical_repository.csv", index=False)
 
     # Evaluation set (mix of in-distribution + out-of-distribution templates)
-    eval_rng = random.Random(args.seed + 1)  # different stream, still reproducible
     eval_tasks = generate_projects(
-        args.n_evaluation, eval_rng, split="eval", id_prefix="evaltask", project_prefix="evalproj"
+        config.N_EVALUATION_TASKS, random.Random(config.RANDOM_SEED + 1),
+        split="eval", id_prefix="evaltask", project_prefix="evalproj"
     )
     eval_df = pd.DataFrame(tasks_to_records(eval_tasks))
 

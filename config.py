@@ -40,7 +40,11 @@ SOLVER_TIME_LIMIT_S = 120       # CBC time limit; accept best feasible solution 
 WORKING_MINUTES_PER_DAY = 480
 WORK_DAYS_PER_BACKLOG = 2     # planning horizon: one working week
 OVERLOAD_FACTOR = 1.5     # times the work that fits in the horizon
-MAX_PROJECTS_PER_BACKLOG = 5
+PROJECTS_PER_BACKLOG = 5
+# The chosen window must hold more work than the backlog needs
+WINDOW_WORK_MARGIN = 1.5
+# Acumulated work of 3 weks
+WINDOW_SPAN_HORIZONS = 3
 
 # LLM
 LLM_MODEL_ID = "gpt-4o-mini"
